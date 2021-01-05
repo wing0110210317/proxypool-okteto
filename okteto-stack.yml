@@ -1,6 +1,6 @@
 name: proxypool
 services:
-  blog:
+  proxypool:
     public: true
     image: okteto.dev/proxypool
     build: .
