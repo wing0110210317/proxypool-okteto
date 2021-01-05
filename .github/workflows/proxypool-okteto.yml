@@ -1,0 +1,62 @@
+#=================================================
+# https://github.com/danxiaonuo/proxypool-okteto
+# Description: Build OpenWrt using GitHub Actions
+# Lisence: MIT
+# Author: danxiaonuo
+# Blog: https://www.danxiaonuo.com
+#=================================================
+
+# 编译的名称
+name: 自动部署okteto
+
+# 设置触发条件
+on:
+  # 仓库触发工作流
+  repository_dispatch:
+  # 编辑文件触发开始编译
+  push:
+    paths:
+      - 'Dockerfile'
+  # 手动触发工作流
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'build proxypool'
+        required: false
+        default: 'build proxypool'
+  # 定时触发编译(每天早5点)
+  schedule:
+     - cron: '0 21 * * *'
+  # 点☆Star触发开始编译
+  watch:  
+     types: [started]
+     
+
+# 任务集
+jobs:
+  build:
+    # 选择虚拟环境
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    
+    # 运行步骤
+    steps:
+    
+    # 准备完毕
+    - name: 准备完毕
+      uses: actions/checkout@v2
+    
+    - name: 登录okteto
+      uses: okteto/login@master
+      with:
+        token: ${{ secrets.OKTETO_TOKEN }}
+
+    - name: "激活命名空间"
+      uses: okteto/namespace@master
+      with:
+        name: danxiaonuo
+        
+    - name: "创建 stack"
+      uses: okteto/deploy-stack@master
+      with:
+        build: "true"
