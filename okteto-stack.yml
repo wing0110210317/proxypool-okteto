@@ -1,0 +1,12 @@
+name: proxypool
+services:
+  blog:
+    public: true
+    image: okteto.dev/proxypool
+    build: .
+    replicas: 1
+    ports:
+      - 12580
+    resources:
+      cpu: 100m
+      memory: 300Mi
