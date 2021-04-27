@@ -9,6 +9,9 @@ MAINTAINER danxiaonuo
 # 时区设置
 ARG TZ=Asia/Shanghai
 ENV TZ=$TZ
+# 版本号
+ARG TAGS=v0.7.1
+ENV TAGS=$TAGS
 
 # 镜像变量
 ARG DOCKER_IMAGE=danxiaonuo/proxypool
@@ -44,7 +47,7 @@ RUN set -eux \
 # 运行工作目录
 WORKDIR /build
 # 克隆源码运行安装
-RUN git clone --depth=1 --progress https://github.com/Sansui233/proxypool.git /src && \
+RUN git clone --depth=1 -b ${TAGS} --progress https://github.com/Sansui233/proxypool.git /src && \
     cd /src && go mod download && make docker
 # ##############################################################################
 
@@ -69,7 +72,7 @@ ENV PKG_DEPS=$PKG_DEPS
 
 # dumb-init
 # https://github.com/Yelp/dumb-init
-ARG DUMBINIT_VERSION=1.2.2
+ARG DUMBINIT_VERSION=1.2.5
 ENV DUMBINIT_VERSION=$DUMBINIT_VERSION
 
 # http://label-schema.org/rc1/
