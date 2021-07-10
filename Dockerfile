@@ -10,7 +10,7 @@ MAINTAINER danxiaonuo
 ARG TZ=Asia/Shanghai
 ENV TZ=$TZ
 # 版本号
-ARG TAGS=v0.7.1
+ARG TAGS=v0.7.3
 ENV TAGS=$TAGS
 
 # 镜像变量
