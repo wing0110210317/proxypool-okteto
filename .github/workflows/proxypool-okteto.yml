@@ -54,7 +54,7 @@ jobs:
     - name: "激活命名空间"
       uses: okteto/namespace@master
       with:
-        name: danxiaonuo
+        name: wing0110210317
         
     - name: "创建 stack"
       uses: okteto/deploy-stack@master
