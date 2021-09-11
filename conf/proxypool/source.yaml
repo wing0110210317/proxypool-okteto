@@ -31,7 +31,7 @@
 # clash格式订阅链接
 - type: clash
   options:
-    url: https://raw.githubusercontent.com/zhaowing/proxy-pool/main/clash/proxies
+    url: https://raw.githubusercontent.com/xwingzhao/proxy-pool/main/clash/proxies
 
 # 某个网站抓取
 - type: web-freessrxyz
