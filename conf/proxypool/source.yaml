@@ -6,11 +6,11 @@
 # 订阅链接
 - type: subscribe
   options:
-    url: 
+    url: https://raw.githubusercontent.com/xwingzhao/Sub/master/sub/share/v2
 
 - type: subscribe
   options:
-    url: 
+    url: https://raw.githubusercontent.com/xwingzhao/Sub/master/sub/share/tr
 
 # 网页模糊抓取
 - type: webfuzz
@@ -31,7 +31,7 @@
 # clash格式订阅链接
 - type: clash
   options:
-    url: https://raw.githubusercontent.com/xwingzhao/proxy-pool/main/clash/proxies
+    url: 
 
 # 某个网站抓取
 - type: web-freessrxyz
