@@ -6,11 +6,11 @@
 # 订阅链接
 - type: subscribe
   options:
-    url: https://raw.githubusercontent.com/wing0110210317/Sub/master/sub/share/v2
+    url: 
 
 - type: subscribe
   options:
-    url: https://raw.githubusercontent.com/wing0110210317/Sub/master/sub/share/tr
+    url: 
 
 # 网页模糊抓取
 - type: webfuzz
