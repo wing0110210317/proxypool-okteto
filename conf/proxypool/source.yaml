@@ -6,11 +6,19 @@
 # 订阅链接
 - type: subscribe
   options:
-    url: https://raw.githubusercontent.com/wing0110210317/Sub/master/sub/share/v2
+    url: https://raw.githubusercontent.com/skywolf627/VmessActions/main/subscribe/vmess.txt
 
 - type: subscribe
   options:
-    url: https://raw.githubusercontent.com/wing0110210317/Sub/master/sub/share/tr
+    url: https://raw.githubusercontent.com/skywolf627/VmessActions/main/subscribe/trojan.txt
+
+- type: subscribe
+  options:
+    url: https://raw.githubusercontent.com/Leon406/Sub/master/sub/share/v2
+
+- type: subscribe
+  options:
+    url: https://github.com/Leon406/Sub/blob/master/sub/share/tr
 
 # 网页模糊抓取
 - type: webfuzz
